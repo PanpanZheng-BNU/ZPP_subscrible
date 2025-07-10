@@ -7,8 +7,17 @@
     "build": "node app.js"
   },
   "keywords": [
-    "ssr", "subscrible link"
+    "ssr",
+    "subscrible link"
   ],
   "author": "Andy Chung",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "superagent": "^6.1.0"
+  },
+  "dependencies": {
+    "request-promise": "^0.0.1",
+    "sync-request": "^6.1.0"
+  }
 }
