@@ -5,21 +5,28 @@
  * @date  2018-11-05
  */
 // Deps
-let fs = require('fs')
+let fs = require("fs");
 
 // Convert normal string to base64 encoding string
 let base64 = (str) => {
-	return new Buffer(str).toString('base64')
-}
+  return new Buffer(str).toString("base64");
+};
 
 // ReadFile Sync Function
-let readSync = (filePath) => fs.readFileSync(filePath).toString('utf-8')
+let readSync = (filePath) => fs.readFileSync(filePath).toString("utf-8");
 
 // WriteFile Sync Function
-let writeSync = (filePath, str) => fs.writeFileSync(filePath, str)
+let writeSync = (filePath, str) => fs.writeFileSync(filePath, str);
+
+let mkDir = (dir) => fs.mkdirSync(dir);
+
+let existsDir = (dir) => fs.existsSync(dir);
 
 module.exports = {
-	base64,
-	readSync,
-	writeSync
-}
+  base64,
+  readSync,
+  writeSync,
+  mkDir,
+  existsDir,
+};
+
